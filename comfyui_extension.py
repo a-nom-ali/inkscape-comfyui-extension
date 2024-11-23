@@ -420,7 +420,7 @@ class ComfyUIExtension(inkex.EffectExtension):
 
         finally:
             # Clean up the temporary directory
-            # shutil.rmtree(self.tempdir)
+            shutil.rmtree(self.tempdir)
             pass
 
 

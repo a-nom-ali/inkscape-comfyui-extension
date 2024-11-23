@@ -19,7 +19,7 @@
         </page>
         <page name="comfy" gui-text="Comfy">
             <param name="api_url" type="string" gui-text="API URL" _store-in-templates="true">http://127.0.0.1:8188/</param>
-            <param name="workflow_json_path" type="string" gui-text="Workflow JSON Path" _store-in-templates="true"/>
+            <param name="workflow_json_path" mode="file" filetypes="json" type="path" gui-text="Workflow" _store-in-templates="true"/>
         </page>
     </param>
     <script>

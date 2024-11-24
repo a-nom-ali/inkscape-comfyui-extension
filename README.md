@@ -66,12 +66,4 @@ The **Inkscape ComfyUI Extension** integrates Inkscape with the ComfyUI API, ena
  * API Interactions: The extension communicates with the ComfyUI API via HTTP requests. Ensure the API URL is correctly configured and secure.
  * File Handling: Temporary files are created during image processing. The extension manages these files securely, but users should be aware of their system’s temporary directory policies.
 
-## Tags:
- * AI
- * Image Generation
- * ComfyUI
- * Inkscape Extension
- * Design Tool
-
-
 By integrating AI-driven image generation into Inkscape, this extension enhances creative workflows, offering designers a powerful tool to expand their design capabilities.

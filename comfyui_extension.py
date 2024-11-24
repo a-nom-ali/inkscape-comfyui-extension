@@ -139,6 +139,7 @@ class ComfyUIWebSocketAPI:
         Returns:
             str: Path to the uploaded file.
         """
+        path = None
         try:
             # Wrap file in formdata so it includes filename
             body = {"image": file}
@@ -169,6 +170,7 @@ class ComfyUIWebSocketAPI:
                 inkex.utils.debug(f"{resp.status_code} - {resp.reason}")
         except Exception as error:
             inkex.utils.debug(error)
+
         return path
 
     def load_image(self, filepath):

@@ -59,7 +59,7 @@ The **Inkscape ComfyUI Extension** integrates Inkscape with the ComfyUI API, ena
 
 ### Additionally
 * Once you have the image, it is a simple matter of tracing the bitmap. You can find this feature at **Path>Trace Bitmap**. Play around with the settings.
-* It often helps to take the results and use that with the same prompt to refine the outcome - play around!
+* It often helps to combine the results with the same prompt to refine the outcome - play around!
 
 
 ## Security Considerations:

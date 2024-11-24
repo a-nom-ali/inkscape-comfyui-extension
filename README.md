@@ -19,7 +19,7 @@ The **Inkscape ComfyUI Extension** integrates Inkscape with the ComfyUI API, ena
  * Inkscape Versions: Designed for Inkscape 1.0 and above.
 
 ## Installation:
-1. Set Up ComfyUI API: Ensure the ComfyUI API is running and accessible at the specified API URL.
+1. Set Up ComfyUI: Ensure ComfyUI is running and accessible at the specified API URL.
 2. Install Inkscape
 3. Install Extension: Place the extension files in Inkscape’s user extensions directory. You can find this folder in:
 

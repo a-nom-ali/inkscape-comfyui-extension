@@ -12,10 +12,10 @@
             <param name="steps" type="int" gui-text="Steps" _store-in-templates="true" min="1" max="100">20</param>
         </page>
         <page name="ids" gui-text="IDs">
-            <param name="positive_id" type="int" gui-text="Positive Prompt ID" _store-in-templates="true" min="0" max="999999">6</param>
-            <param name="negative_id" type="int" gui-text="Negative Prompt ID" _store-in-templates="true" min="0" max="999999">7</param>
-            <param name="ksampler_id" type="int" gui-text="KSampler ID" _store-in-templates="true" min="0" max="999999">8</param>
-            <param name="image_input_id" type="int" gui-text="Image Input ID" _store-in-templates="true" min="0" max="999999">5</param>
+            <param name="positive_id" type="int" gui-text="Positive Prompt ID" _store-in-templates="true" min="0" max="999999">16</param>
+            <param name="negative_id" type="int" gui-text="Negative Prompt ID" _store-in-templates="true" min="0" max="999999">19</param>
+            <param name="ksampler_id" type="int" gui-text="KSampler ID" _store-in-templates="true" min="0" max="999999">36</param>
+            <param name="image_input_id" type="int" gui-text="Image Input ID" _store-in-templates="true" min="0" max="999999">38</param>
         </page>
         <page name="comfy" gui-text="Comfy">
             <param name="api_url" type="string" gui-text="API URL" _store-in-templates="true">http://127.0.0.1:8188/</param>

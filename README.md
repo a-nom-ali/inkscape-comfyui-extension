@@ -67,3 +67,8 @@ The **Inkscape ComfyUI Extension** integrates Inkscape with the ComfyUI API, ena
  * File Handling: Temporary files are created during image processing. The extension manages these files securely, but users should be aware of their system’s temporary directory policies.
 
 By integrating AI-driven image generation into Inkscape, this extension enhances creative workflows, offering designers a powerful tool to expand their design capabilities.
+
+Credits:
+Basic SDXL Img2Img Workflow by OpenArt:
+https://openart.ai/workflows/openart/basic-sdxl-img2img-workflow/yrUf3Yj2kqSHVbZsS9vy
+

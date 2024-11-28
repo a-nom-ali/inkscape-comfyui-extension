@@ -1,5 +1,4 @@
 ![ComfyUIInkscapeExtension.png](assets/ComfyUIInkscapeExtension.png)
-![ComfyUIInkscapeExtension.png](assets/ComfyUIInkscapeExtension.png)
 # Inkscape ComfyUI Extension
 An Inkscape extension that integrates ComfyUI - turning Inkscape into Recraft++
 

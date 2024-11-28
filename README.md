@@ -69,6 +69,8 @@ The **Inkscape ComfyUI Extension** integrates Inkscape with the ComfyUI API, ena
 6. Wait for ComfyUI to finish producing your results
 7. Groovy.
 
+![SampleGroovy.png](assets/SampleGroovy.png)
+
 ### Image To Image
 1. Draw something and make sure it's selected or select an existing object. (grouping helps)
 2. Extensions>Render>ComfyUI
@@ -96,6 +98,8 @@ The **Inkscape ComfyUI Extension** integrates Inkscape with the ComfyUI API, ena
 7. Press Apply
 8. Wait for ComfyUI to finish producing your results
 9. Death Drop!
+
+![SampleGroovy.png](assets/SampleInpaint.png)
 
 ### Additionally
 * Once you have the image, it is a simple matter of tracing the bitmap. You can find this feature at **Path>Trace Bitmap**. Play around with the settings.

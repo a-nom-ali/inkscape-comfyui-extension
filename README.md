@@ -79,6 +79,8 @@ The **Inkscape ComfyUI Extension** integrates Inkscape with the ComfyUI API, ena
 7. Wait for ComfyUI to finish producing your results
 8. Rave in awe!
 
+![SampleCharacter.png](assets/SampleCharacter.png)
+
 ### Inpainting
 1. Mask Group
    1. Start by drawing a rectangle matching the bounding box of the full input, and make it transparent.

@@ -68,7 +68,17 @@ The **Inkscape ComfyUI Extension** integrates Inkscape with the ComfyUI API, ena
 
 By integrating AI-driven image generation into Inkscape, this extension enhances creative workflows, offering designers a powerful tool to expand their design capabilities.
 
-Credits:
-Basic SDXL Img2Img Workflow by OpenArt:
+### Credits:
+
+* Basic SDXL Txt2Img Workflow by OpenArt:
+https://openart.ai/workflows/openart/basic-sdxl-workflow/P8VEtDSQGYf4pOugtnvO
+* Basic SDXL Img2Img Workflow by OpenArt:
 https://openart.ai/workflows/openart/basic-sdxl-img2img-workflow/yrUf3Yj2kqSHVbZsS9vy
+* Basic Inpainting modded from Prompting Pixels:
+https://promptingpixels.com/comfyui-workflows/
+
+# COMING SOON
+* Text To Image
+* Inpainting
+* Pose Estimation (Maybe)
 

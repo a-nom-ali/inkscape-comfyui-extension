@@ -6,6 +6,8 @@ An Inkscape extension that integrates ComfyUI - turning Inkscape into Recraft++
 
 The **Inkscape ComfyUI Extension** integrates Inkscape with the ComfyUI API, enabling users to generate images based on selected SVG objects and specified prompts. This extension facilitates the creation of AI-generated images directly within Inkscape, streamlining the design workflow.
 
+<a href="https://www.patreon.com/bePatron?u=26347598" data-patreon-widget-type="become-patron-button">Support me on patreon!</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>
+
 ## Key Features:
  * AI Image Generation: Transform selected SVG elements into AI-generated images using custom positive and negative prompts.
  * Seamless Integration: Directly interact with the ComfyUI API from within Inkscape.
@@ -115,3 +117,5 @@ https://promptingpixels.com/comfyui-workflows/
 
 # COMING SOON
 * Pose Estimation
+
+<a href="https://www.patreon.com/bePatron?u=26347598" data-patreon-widget-type="become-patron-button">Support me on patreon!</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>

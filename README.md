@@ -112,6 +112,4 @@ https://openart.ai/workflows/openart/basic-sdxl-img2img-workflow/yrUf3Yj2kqSHVbZ
 https://promptingpixels.com/comfyui-workflows/
 
 # COMING SOON
-* Text To Image
-* Inpainting
-* Pose Estimation (Maybe)
+* Pose Estimation

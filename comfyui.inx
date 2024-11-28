@@ -4,22 +4,54 @@
     <id>com.vrz.comfyui</id>
     <param name="tab" type="notebook">
         <page name="controls" gui-text="Controls">
+            <param name="workflow_select" type="optiongroup" appearance="combo" gui-text="Workflow" _store-in-templates="true">
+                <option value="basic" default="true">Basic Text To Image</option>
+                <option value="img2img" default="true">Image To Image</option>
+                <option value="masked" default="true">Inpainting/Masked (experimental)</option>
+                <option value="pose" default="true">Pose (experimental/untested)</option>
+            </param>
             <param name="positive_prompt" type="string" gui-text="Positive Prompt" _store-in-templates="true" appearance="multiline">a cat in a party hat</param>
             <param name="negative_prompt" type="string" gui-text="Negative Prompt" _store-in-templates="true" appearance="multiline">blurry</param>
-            <param name="cfg_scale" type="float" gui-text="CFG Scale" _store-in-templates="true" min="1.00" max="15.00" precision="2">7.00</param>
+            <param name="cfg_scale" type="float" gui-text="CFG Scale" _store-in-templates="true" min="1.00" max="100.00" precision="2">7.00</param>
             <param name="denoise" type="float" gui-text="Denoise" _store-in-templates="true" min="0.000" max="1.000" precision="3">0.750</param>
             <param name="seed" type="int" gui-text="Seed" _store-in-templates="true" min="-1" max="10000000000">0</param>
             <param name="steps" type="int" gui-text="Steps" _store-in-templates="true" min="1" max="100">20</param>
         </page>
         <page name="ids" gui-text="IDs">
-            <param name="positive_id" type="int" gui-text="Positive Prompt ID" _store-in-templates="true" min="0" max="999999">16</param>
-            <param name="negative_id" type="int" gui-text="Negative Prompt ID" _store-in-templates="true" min="0" max="999999">19</param>
-            <param name="ksampler_id" type="int" gui-text="KSampler ID" _store-in-templates="true" min="0" max="999999">36</param>
-            <param name="image_input_id" type="int" gui-text="Image Input ID" _store-in-templates="true" min="0" max="999999">38</param>
+            <param name="ids_tab" type="notebook">
+                <page name="basic_ids" gui-text="Basic IDs">
+                    <param name="basic_positive_id" type="int" gui-text="Positive Prompt ID" _store-in-templates="true" min="0" max="999999">30</param>
+                    <param name="basic_negative_id" type="int" gui-text="Negative Prompt ID" _store-in-templates="true" min="0" max="999999">33</param>
+                    <param name="basic_ksampler_id" type="int" gui-text="KSampler ID" _store-in-templates="true" min="0" max="999999">3</param>
+                </page>
+                <page name="img2img_ids" gui-text=" Image To Image IDs">
+                    <param name="img2img_positive_id" type="int" gui-text="Positive Prompt ID" _store-in-templates="true" min="0" max="999999">16</param>
+                    <param name="img2img_negative_id" type="int" gui-text="Negative Prompt ID" _store-in-templates="true" min="0" max="999999">19</param>
+                    <param name="img2img_ksampler_id" type="int" gui-text="KSampler ID" _store-in-templates="true" min="0" max="999999">36</param>
+                    <param name="img2img_image_input_id" type="int" gui-text="Image Input ID" _store-in-templates="true" min="0" max="999999">38</param>
+                </page>
+                <page name="masked_ids" gui-text="Inpainting IDs">
+                    <param name="masked_positive_id" type="int" gui-text="Positive Prompt ID" _store-in-templates="true" min="0" max="999999">5</param>
+                    <param name="masked_negative_id" type="int" gui-text="Negative Prompt ID" _store-in-templates="true" min="0" max="999999">6</param>
+                    <param name="masked_ksampler_id" type="int" gui-text="KSampler ID" _store-in-templates="true" min="0" max="999999">9</param>
+                    <param name="masked_image_input_id" type="int" gui-text="Image Input ID" _store-in-templates="true" min="0" max="999999">17</param>
+                    <param name="masked_mask_input_id" type="int" gui-text="Mask Input ID" _store-in-templates="true" min="0" max="999999">21</param>
+                </page>
+                <page name="pose_ids" gui-text="Pose IDs">
+                    <param name="pose_positive_id" type="int" gui-text="Positive Prompt ID" _store-in-templates="true" min="0" max="999999">16</param>
+                    <param name="pose_negative_id" type="int" gui-text="Negative Prompt ID" _store-in-templates="true" min="0" max="999999">19</param>
+                    <param name="pose_ksampler_id" type="int" gui-text="KSampler ID" _store-in-templates="true" min="0" max="999999">36</param>
+                    <param name="pose_image_input_id" type="int" gui-text="Image Input ID" _store-in-templates="true" min="0" max="999999">38</param>
+                    <param name="pose_input_id" type="int" gui-text="Pose Input ID" _store-in-templates="true" min="0" max="999999">0</param>
+                </page>
+            </param>
         </page>
         <page name="comfy" gui-text="Comfy">
             <param name="api_url" type="string" gui-text="API URL" _store-in-templates="true">http://127.0.0.1:8188/</param>
-            <param name="workflow_json_path" mode="file" filetypes="json" type="path" gui-text="Workflow" _store-in-templates="true"/>
+            <param name="basic_workflow_json_path" mode="file" filetypes="json" type="path" gui-text="Basic Workflow" _store-in-templates="true"/>
+            <param name="img2img_workflow_json_path" mode="file" filetypes="json" type="path" gui-text="Image To Image Workflow" _store-in-templates="true"/>
+            <param name="masked_workflow_json_path" mode="file" filetypes="json" type="path" gui-text="Inpaint/masked Workflow" _store-in-templates="true"/>
+            <param name="pose_workflow_json_path" mode="file" filetypes="json" type="path" gui-text="Pose Workflow" _store-in-templates="true"/>
         </page>
     </param>
     <script>

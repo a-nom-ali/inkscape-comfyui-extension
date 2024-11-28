@@ -82,7 +82,7 @@
   },
   "17": {
     "inputs": {
-      "image": "img2img_00487_ (1).png",
+      "image": "square_image_input_image (2).png",
       "upload": "image"
     },
     "class_type": "LoadImage",
@@ -102,7 +102,7 @@
         2
       ],
       "mask": [
-        "25",
+        "26",
         0
       ]
     },
@@ -125,7 +125,7 @@
   },
   "21": {
     "inputs": {
-      "image": "square_mask_input_image_edited (3).png",
+      "image": "square_mask_input_image (1) (1).png",
       "upload": "image"
     },
     "class_type": "LoadImage",
@@ -133,41 +133,16 @@
       "title": "Load Image"
     }
   },
-  "23": {
+  "26": {
     "inputs": {
       "mask": [
-        "25",
-        0
-      ]
-    },
-    "class_type": "MaskToImage",
-    "_meta": {
-      "title": "Mask To Image (mtb)"
-    }
-  },
-  "24": {
-    "inputs": {
-      "images": [
-        "23",
-        0
-      ]
-    },
-    "class_type": "PreviewImage",
-    "_meta": {
-      "title": "Preview Image"
-    }
-  },
-  "25": {
-    "inputs": {
-      "channel": "red",
-      "image": [
         "21",
-        0
+        1
       ]
     },
-    "class_type": "ImageToMask",
+    "class_type": "InvertMask",
     "_meta": {
-      "title": "Convert Image to Mask"
+      "title": "InvertMask"
     }
   }
 }

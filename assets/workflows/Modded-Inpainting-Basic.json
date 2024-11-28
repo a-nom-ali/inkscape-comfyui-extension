@@ -1,6 +1,6 @@
 {
-  "last_node_id": 25,
-  "last_link_id": 49,
+  "last_node_id": 26,
+  "last_link_id": 56,
   "nodes": [
     {
       "id": 3,
@@ -105,7 +105,7 @@
         "1": 262
       },
       "flags": {},
-      "order": 9,
+      "order": 7,
       "mode": 0,
       "inputs": [
         {
@@ -165,7 +165,7 @@
         "1": 54.55741882324219
       },
       "flags": {},
-      "order": 10,
+      "order": 8,
       "mode": 0,
       "inputs": [
         {
@@ -206,7 +206,7 @@
         "1": 452
       },
       "flags": {},
-      "order": 11,
+      "order": 9,
       "mode": 0,
       "inputs": [
         {
@@ -231,7 +231,7 @@
         "1": 98
       },
       "flags": {},
-      "order": 7,
+      "order": 6,
       "mode": 0,
       "inputs": [
         {
@@ -247,7 +247,7 @@
         {
           "name": "mask",
           "type": "MASK",
-          "link": 49
+          "link": 55
         }
       ],
       "outputs": [
@@ -267,31 +267,6 @@
       "widgets_values": [
         6
       ]
-    },
-    {
-      "id": 24,
-      "type": "PreviewImage",
-      "pos": [
-        1222,
-        1228
-      ],
-      "size": {
-        "0": 210,
-        "1": 246
-      },
-      "flags": {},
-      "order": 8,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 42
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "PreviewImage"
-      }
     },
     {
       "id": 17,
@@ -329,124 +304,8 @@
         "Node name for S&R": "LoadImage"
       },
       "widgets_values": [
-        "img2img_00487_ (1).png",
+        "square_image_input_image (2).png",
         "image"
-      ]
-    },
-    {
-      "id": 23,
-      "type": "MaskToImage",
-      "pos": [
-        1095,
-        1071
-      ],
-      "size": {
-        "0": 210,
-        "1": 26
-      },
-      "flags": {},
-      "order": 6,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "mask",
-          "type": "MASK",
-          "link": 48
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            42
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "MaskToImage"
-      }
-    },
-    {
-      "id": 21,
-      "type": "LoadImage",
-      "pos": [
-        436,
-        1034
-      ],
-      "size": {
-        "0": 315,
-        "1": 314.0000305175781
-      },
-      "flags": {},
-      "order": 2,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            47
-          ],
-          "shape": 3,
-          "slot_index": 0
-        },
-        {
-          "name": "MASK",
-          "type": "MASK",
-          "links": [],
-          "shape": 3,
-          "slot_index": 1
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "LoadImage"
-      },
-      "widgets_values": [
-        "square_mask_input_image_edited (3).png",
-        "image"
-      ]
-    },
-    {
-      "id": 25,
-      "type": "ImageToMask",
-      "pos": [
-        785,
-        1030
-      ],
-      "size": [
-        210,
-        58
-      ],
-      "flags": {},
-      "order": 5,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "link": 47
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MASK",
-          "type": "MASK",
-          "links": [
-            48,
-            49
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "ImageToMask"
-      },
-      "widgets_values": [
-        "red"
       ]
     },
     {
@@ -487,6 +346,82 @@
       "widgets_values": [
         "red glowing eye of sauron, lotr, cinematic"
       ]
+    },
+    {
+      "id": 21,
+      "type": "LoadImage",
+      "pos": [
+        436,
+        1034
+      ],
+      "size": {
+        "0": 315,
+        "1": 314.0000305175781
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [
+            54
+          ],
+          "shape": 3,
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "square_mask_input_image (1) (1).png",
+        "image"
+      ]
+    },
+    {
+      "id": 26,
+      "type": "InvertMask",
+      "pos": [
+        815,
+        899
+      ],
+      "size": {
+        "0": 210,
+        "1": 26
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 54
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [
+            55
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "InvertMask"
+      }
     }
   ],
   "links": [
@@ -579,32 +514,16 @@
       "IMAGE"
     ],
     [
-      42,
-      23,
-      0,
-      24,
-      0,
-      "IMAGE"
-    ],
-    [
-      47,
+      54,
       21,
-      0,
-      25,
-      0,
-      "IMAGE"
-    ],
-    [
-      48,
-      25,
-      0,
-      23,
+      1,
+      26,
       0,
       "MASK"
     ],
     [
-      49,
-      25,
+      55,
+      26,
       0,
       18,
       2,

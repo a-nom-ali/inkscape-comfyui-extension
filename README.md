@@ -2,6 +2,8 @@
 # Inkscape ComfyUI Extension
 An Inkscape extension that integrates ComfyUI - turning Inkscape into Recraft++
 
+![Sample.png](assets/Sample.png)
+
 The **Inkscape ComfyUI Extension** integrates Inkscape with the ComfyUI API, enabling users to generate images based on selected SVG objects and specified prompts. This extension facilitates the creation of AI-generated images directly within Inkscape, streamlining the design workflow.
 
 ## Key Features:

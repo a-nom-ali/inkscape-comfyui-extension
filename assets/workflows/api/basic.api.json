@@ -31,7 +31,7 @@
   },
   "4": {
     "inputs": {
-      "ckpt_name": "sd_xl_refiner_1.0_0.9vae.safetensors"
+      "ckpt_name": "sd_xl_base_1.0.safetensors"
     },
     "class_type": "CheckpointLoaderSimple",
     "_meta": {
@@ -86,8 +86,8 @@
       "crop_h": 0,
       "target_width": 4096,
       "target_height": 4096,
-      "text_g": "a photo of an anthropomorphic fox wearing a spacesuit inside a sci-fi spaceship\n\ncinematic, dramatic lighting, high resolution, detailed, 4k",
-      "text_l": "a photo of an anthropomorphic fox wearing a spacesuit inside a sci-fi spaceship\n\ncinematic, dramatic lighting, high resolution, detailed, 4k",
+      "text_g": "Groovy hippy girl up close, vibrant colors, natural light, candid shot, high quality, National Geographic style, detailed facial features, floral patterns, bohemian accessories, soft bokeh background, capturing joy and freedom, portrait, documentary photography, 8k resolution",
+      "text_l": "Groovy hippy girl up close, vibrant colors, natural light, candid shot, high quality, National Geographic style, detailed facial features, floral patterns, bohemian accessories, soft bokeh background, capturing joy and freedom, portrait, documentary photography, 8k resolution",
       "clip": [
         "4",
         1
@@ -106,8 +106,8 @@
       "crop_h": 0,
       "target_width": 4096,
       "target_height": 4096,
-      "text_g": "blurry, animation, 3d render, illustration, toy, puppet, claymation, low quality, flag, nasa, mission patch",
-      "text_l": "blurry, animation, 3d render, illustration, toy, puppet, claymation, low quality, flag, nasa, mission patch",
+      "text_g": "blurry background, distorted features, harsh lighting, dull colors, unflattering angle",
+      "text_l": "blurry background, distorted features, harsh lighting, dull colors, unflattering angle",
       "clip": [
         "4",
         1

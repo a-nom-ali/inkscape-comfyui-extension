@@ -761,6 +761,7 @@ class ComfyUIExtension(inkex.EffectExtension):
             offset_y = (self.longest_side - self.exported_height) / 2
         else:
             result_ratio = 1.0
+            self.longest_side = max(width, height)
             self.exported_width = result_image.size[0]
             self.exported_height = result_image.size[1]
 

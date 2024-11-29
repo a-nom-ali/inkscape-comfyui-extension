@@ -50,7 +50,7 @@ The **Inkscape ComfyUI Extension** integrates Inkscape with the ComfyUI API, ena
      * A KSampler's:
        * CFG Scale
        * Denoise
-       * Seed
+       * Seed (-1 for random seed)
        * Steps
      * A mask input for inpainting (mask element id must include '__mask')
      * A pose input for pose estimation (pose element id must include '__pose')
@@ -61,7 +61,7 @@ The **Inkscape ComfyUI Extension** integrates Inkscape with the ComfyUI API, ena
 4. If your ComfyUI IP or port differs, update to match.
    * If ComfyUI is on a different PC on your network, remember to start it with the argument: 
    > "--listen 0.0.0.0"
-5. Remember to follow the above process when you change the workflow. Would be nice to improve this to a history of workflows that can be selected from - help welcome!
+5. Remember to follow the above process when you change the workflow. 
 
 ## Usage:
 ### Text To Image
@@ -109,12 +109,33 @@ The **Inkscape ComfyUI Extension** integrates Inkscape with the ComfyUI API, ena
 * Once you have the image, it is a simple matter of tracing the bitmap. You can find this feature at **Path>Trace Bitmap**. Play around with the settings.
 * It often helps to combine the results with the same prompt to refine the outcome - play around!
 
+### Tips
+* Set seed to -1 for random seed
+* To see all the values used to generate an image, select that image, then in the file menu 
+    > Edit > XML Editor
+  * Click on the __inkscape:custom_metadata__ attribute to see the prompts and other values selected to generate the image.
+  * Handy for reuse of previous seeds and prompts.
 
 ## Security Considerations:
  * API Interactions: The extension communicates with the ComfyUI API via HTTP requests. Ensure the API URL is correctly configured and secure.
  * File Handling: Temporary files are created during image processing. The extension manages these files securely, but users should be aware of their system’s temporary directory policies.
 
 By integrating AI-driven image generation into Inkscape, this extension enhances creative workflows, offering designers a powerful tool to expand their design capabilities.
+
+## Help Wanted
+I'm very open to help from others!
+### Ways you could help:
+* Unit tests: I've set up some very bare-bone scaffolding, but to make this
+extension available in the inkscape extension manager, it first needs to pass the
+[review process](https://inkscape.gitlab.io/extensions/documentation/authors/submit.html), which requires tests.
+* Custom workflows and/or workflow history: Adding stuff to inkscape extensions is a bit clumsy the way I'm doing it. I'm sure there are 
+more elegant ways that would allow lists and dynamically populated dropdowns using Gtk, for instance.<p/>
+It would be great to improve the UI if anyone has the know-how to assist!
+* "Relative masking": If a mask element is on top of the input element it should automatically clip the mask according 
+to the transform and position of the input element.
+* Suggesting features I haven't thought of.
+* Suggesting improvements. 
+
 
 ### Credits:
 

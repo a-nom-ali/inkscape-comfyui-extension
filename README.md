@@ -34,7 +34,11 @@ The **Inkscape ComfyUI Extension** integrates Inkscape with the ComfyUI API, ena
       - Edit>Preferences or Inkscape>Settings on Mac
       - Select System
       - Press the **"Open"** button next to "User extensions"
-4. Restart Inkscape: Restart Inkscape to load the new extension.
+
+4. The files that you need to copy are:<br>
+    > comfyui_extension.py<br>
+    > comfyui.inx
+5. Restart Inkscape: Restart Inkscape to load the new extension.
 
 ## Setup:
 1. Api version workflows are included - check to make sure you have all the right models by opening each in ComfyUI first.

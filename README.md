@@ -28,7 +28,7 @@ The **Inkscape ComfyUI Extension** integrates Inkscape with the ComfyUI API, ena
 
 ## Installation:
 1. [Set Up ComfyUI](https://stable-diffusion-art.com/how-to-install-comfyui/): Ensure ComfyUI is running and accessible at the specified API URL.
-2. Install Inkscape
+2. [Install Inkscape](https://inkscape.org/release/inkscape-1.4/)
 3. Install Extension: Place the extension files in Inkscape’s user extensions directory. You can find this folder in:
 
       - Edit>Preferences or Inkscape>Settings on Mac

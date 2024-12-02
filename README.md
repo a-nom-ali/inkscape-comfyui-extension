@@ -137,7 +137,7 @@ to the transform and position of the input element.
 * Suggesting improvements. 
 
 
-### Credits:
+## Credits:
 
 * Basic SDXL Txt2Img Workflow by OpenArt:
 https://openart.ai/workflows/openart/basic-sdxl-workflow/P8VEtDSQGYf4pOugtnvO

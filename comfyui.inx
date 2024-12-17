@@ -16,6 +16,7 @@
             <param name="denoise" type="float" gui-text="Denoise" _store-in-templates="true" min="0.000" max="1.000" precision="3">0.750</param>
             <param name="seed" type="int" gui-text="Seed" _store-in-templates="true" min="-1" max="10000000000">0</param>
             <param name="steps" type="int" gui-text="Steps" _store-in-templates="true" min="1" max="100">20</param>
+            <param name="batch" type="int" gui-text="Batch" _store-in-templates="true" min="1" max="50">3</param>
         </page>
         <page name="ids" gui-text="IDs">
             <param name="ids_tab" type="notebook">

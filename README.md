@@ -13,10 +13,12 @@ The **Inkscape ComfyUI Extension** integrates Inkscape with the ComfyUI API, ena
  * Seamless Integration: Directly interact with the ComfyUI API from within Inkscape.
  * Customizable Parameters: Adjust settings such as CFG Scale, Denoise, Seed, and Steps to fine-tune image generation.
  * Workflow Management: Load and utilize predefined workflows in JSON format.
-
-## New Features
  * Text to Image
  * Inpainting
+
+## New Features
+ * Batch option: Once you have a look you like, generate a batch.
+ * Workflows are now embedded in code as a fallback when no workflows are selected.
 
 ## Dependencies:
  * Inkscape: Version 1.3.2 or higher.
@@ -41,7 +43,7 @@ The **Inkscape ComfyUI Extension** integrates Inkscape with the ComfyUI API, ena
 5. Restart Inkscape: Restart Inkscape to load the new extension.
 
 ## Setup:
-1. Api version workflows are included - check to make sure you have all the right models by opening each in ComfyUI first.
+1. Api version workflows are included and embedded in code if none are selected as a fallback - check to ensure you have all the right models by opening each in ComfyUI first.
    * Or use your own after saving it to API format.
 2. The features are currently limited to:
      * A positive prompt
@@ -54,20 +56,21 @@ The **Inkscape ComfyUI Extension** integrates Inkscape with the ComfyUI API, ena
        * Steps
      * A mask input for inpainting (mask element id must include '__mask')
      * A pose input for pose estimation (pose element id must include '__pose')
-3. You need to find the correct IDs in the JSON file and set those in the IDs tab.
-   * These IDs will differ from what you see in your normal (non-api) workflow in ComfyUI, so remember to check.
-   * Defaults for these ID's have been set up to match those in the following folder: 
+3. If you're using the default workflows provided the following section regarding the IDS should already be correctly set up, and can be ignored for now.
+4. You need to find the correct IDs in the JSON file and set those in the IDs tab.
+   * These IDs will differ from what you see in your normal (non-API) workflow in ComfyUI, so remember to check.
+   * Defaults for these IDs have been set up to match those in the following folder: 
      > assets/workflows/api
-4. If your ComfyUI IP or port differs, update to match.
+5. If your ComfyUI IP or port differs, update to match.
    * If ComfyUI is on a different PC on your network, remember to start it with the argument: 
    > "--listen 0.0.0.0"
-5. Remember to follow the above process when you change the workflow. 
+6. Remember to follow the above process when you change the workflow. 
 
 ## Usage:
 ### Text To Image
 1. Extensions>Render>ComfyUI
 2. If you haven't done the setup, do so now
-3. Make sure "Text To Image" workflow is selected
+3. Make sure the "Text To Image" workflow is selected
 4. Enter your prompt and select your values
 5. Press Apply
 6. Wait for ComfyUI to finish producing your results
@@ -79,7 +82,7 @@ The **Inkscape ComfyUI Extension** integrates Inkscape with the ComfyUI API, ena
 1. Draw something and make sure it's selected or select an existing object. (grouping helps)
 2. Extensions>Render>ComfyUI
 3. If you haven't done the setup, do so now
-4. Make sure "Image To Image" workflow is selected
+4. Make sure the "Image To Image" workflow is selected
 5. Enter your prompt and select your values
 6. Press Apply
 7. Wait for ComfyUI to finish producing your results
@@ -97,7 +100,7 @@ The **Inkscape ComfyUI Extension** integrates Inkscape with the ComfyUI API, ena
 2. Select your input as well as the mask group
 3. Extensions>Render>ComfyUI
 4. If you haven't done the setup, do so now
-5. Make sure "Inpainting" workflow is selected
+5. Make sure the "Inpainting" workflow is selected
 6. Enter your prompt and select your values
 7. Press Apply
 8. Wait for ComfyUI to finish producing your results
@@ -126,9 +129,9 @@ By integrating AI-driven image generation into Inkscape, this extension enhances
 I'm very open to help from others!
 ### Ways you could help:
 * Unit tests: I've set up some very bare-bone scaffolding, but to make this
-extension available in the inkscape extension manager, it first needs to pass the
+extension available in the Inkscape extension manager, it first needs to pass the
 [review process](https://inkscape.gitlab.io/extensions/documentation/authors/submit.html), which requires tests.
-* Custom workflows and/or workflow history: Adding stuff to inkscape extensions is a bit clumsy the way I'm doing it. I'm sure there are 
+* Custom workflows and/or workflow history: Adding stuff to Inkscape extensions is a bit clumsy the way I'm doing it. I'm sure there are 
 more elegant ways that would allow lists and dynamically populated dropdowns using Gtk, for instance.<p/>
 It would be great to improve the UI if anyone has the know-how to assist!
 * "Relative masking": If a mask element is on top of the input element it should automatically clip the mask according 

@@ -373,6 +373,26 @@ class ComfyUIExtension(inkex.EffectExtension):
             --pose_input_id: ID for the pose input node in the Pose workflow.
             --pose_ksampler_id: ID for the sampler node in the Pose workflow.
 
+            --custom1_positive_id: ID for the positive prompt node in the Custom 1 Image To Image workflow.
+            --custom1_negative_id: ID for the negative prompt node in the Custom 1 Image To Image workflow.
+            --custom1_image_input_id: ID for the image input node in the Custom 1 Image To Image workflow.
+            --custom1_ksampler_id: ID for the sampler node in the Custom 1 Image To Image workflow.
+
+            --custom2_positive_id: ID for the positive prompt node in the Custom 2 Image To Image workflow.
+            --custom2_negative_id: ID for the negative prompt node in the Custom 2 Image To Image workflow.
+            --custom2_image_input_id: ID for the image input node in the Custom 2 Image To Image workflow.
+            --custom2_ksampler_id: ID for the sampler node in the Custom 2 Image To Image workflow.
+
+            --custom3_positive_id: ID for the positive prompt node in the Custom 3 Image To Image workflow.
+            --custom3_negative_id: ID for the negative prompt node in the Custom 3 Image To Image workflow.
+            --custom3_image_input_id: ID for the image input node in the Custom 3 Image To Image workflow.
+            --custom3_ksampler_id: ID for the sampler node in the Custom 3 Image To Image workflow.
+
+            --custom4_positive_id: ID for the positive prompt node in the Custom 4 Image To Image workflow.
+            --custom4_negative_id: ID for the negative prompt node in the Custom 4 Image To Image workflow.
+            --custom4_image_input_id: ID for the image input node in the Custom 4 Image To Image workflow.
+            --custom4_ksampler_id: ID for the sampler node in the Custom 4 Image To Image workflow.
+
             --basic_workflow_json_path: Basic Workflow JSON Path
             --img2img_workflow_json_path: Image To Image Workflow JSON Path
             --masked_workflow_json_path: Inpainting/Masked Workflow JSON Path
@@ -421,6 +441,26 @@ class ComfyUIExtension(inkex.EffectExtension):
         pars.add_argument("--pose_input_id", type=int, default=0, help="Pose Input ID")
         pars.add_argument("--pose_ksampler_id", type=int, default=36, help="KSampler ID")
 
+        pars.add_argument("--custom1_positive_id", type=int, default=16, help="Positive Prompt ID")
+        pars.add_argument("--custom1_negative_id", type=int, default=19, help="Negative Prompt ID")
+        pars.add_argument("--custom1_image_input_id", type=int, default=38, help="Image Input ID")
+        pars.add_argument("--custom1_ksampler_id", type=int, default=36, help="KSampler ID")
+
+        pars.add_argument("--custom2_positive_id", type=int, default=16, help="Positive Prompt ID")
+        pars.add_argument("--custom2_negative_id", type=int, default=19, help="Negative Prompt ID")
+        pars.add_argument("--custom2_image_input_id", type=int, default=38, help="Image Input ID")
+        pars.add_argument("--custom2_ksampler_id", type=int, default=36, help="KSampler ID")
+
+        pars.add_argument("--custom3_positive_id", type=int, default=16, help="Positive Prompt ID")
+        pars.add_argument("--custom3_negative_id", type=int, default=19, help="Negative Prompt ID")
+        pars.add_argument("--custom3_image_input_id", type=int, default=38, help="Image Input ID")
+        pars.add_argument("--custom3_ksampler_id", type=int, default=36, help="KSampler ID")
+
+        pars.add_argument("--custom4_positive_id", type=int, default=16, help="Positive Prompt ID")
+        pars.add_argument("--custom4_negative_id", type=int, default=19, help="Negative Prompt ID")
+        pars.add_argument("--custom4_image_input_id", type=int, default=38, help="Image Input ID")
+        pars.add_argument("--custom4_ksampler_id", type=int, default=36, help="KSampler ID")
+
         pars.add_argument("--basic_workflow_json_path",
                           type=str, help="Basic Workflow JSON Path")
         pars.add_argument("--img2img_workflow_json_path",
@@ -429,6 +469,15 @@ class ComfyUIExtension(inkex.EffectExtension):
                           type=str, help="Inpainting/Masked Workflow JSON Path")
         pars.add_argument("--pose_workflow_json_path",
                           type=str, help="Pose Workflow JSON Path")
+
+        pars.add_argument("--custom1_workflow_json_path",
+                          type=str, help="Custom 1 Workflow JSON Path")
+        pars.add_argument("--custom2_workflow_json_path",
+                          type=str, help="Custom 2 Workflow JSON Path")
+        pars.add_argument("--custom3_workflow_json_path",
+                          type=str, help="Custom 3 Workflow JSON Path")
+        pars.add_argument("--custom4_workflow_json_path",
+                          type=str, help="Custom 4 Workflow JSON Path")
 
         pars.add_argument("--api_url", type=str, default="127.0.0.1:8188", help="API URL")
 
@@ -657,7 +706,7 @@ class ComfyUIExtension(inkex.EffectExtension):
             "seed": self.options.seed if self.options.seed > 0 else random.randint(0, 1000000000),
         })
 
-        if self.options.workflow_select in ["img2img", "masked", "pose"]:
+        if self.options.workflow_select in ["img2img", "masked", "pose", "custom1", "custom2", "custom3", "custom4"]:
             image_input_id = str(self.get_workflow_option("image_input_id"))
             if int(image_input_id) > 0 and image_input_id in workflow_json:
                 input_path = self.get_image_input_path(
@@ -822,6 +871,18 @@ class ComfyUIExtension(inkex.EffectExtension):
         if self.options.workflow_select == "pose":
             return self.pose_workflow_json_path
 
+        if self.options.workflow_select == "custom1":
+            return self.options.custom1_workflow_json_path
+
+        if self.options.workflow_select == "custom2":
+            return self.options.custom_workflow_json_path
+
+        if self.options.workflow_select == "custom3":
+            return self.options.custom3_workflow_json_path
+
+        if self.options.workflow_select == "custom4":
+            return self.options.custom4_workflow_json_path
+
         return None
 
     def get_workflow_path(self):
@@ -845,6 +906,18 @@ class ComfyUIExtension(inkex.EffectExtension):
 
         if self.options.workflow_select == "pose":
             return self.options.pose_workflow_json_path
+
+        if self.options.workflow_select == "custom1":
+            return self.options.custom1_workflow_json_path
+
+        if self.options.workflow_select == "custom2":
+            return self.options.custom_workflow_json_path
+
+        if self.options.workflow_select == "custom3":
+            return self.options.custom3_workflow_json_path
+
+        if self.options.workflow_select == "custom4":
+            return self.options.custom4_workflow_json_path
 
         return None
 

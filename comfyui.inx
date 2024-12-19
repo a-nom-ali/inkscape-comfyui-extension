@@ -9,6 +9,10 @@
                 <option value="img2img" default="true">Image To Image</option>
                 <option value="masked" default="true">Inpainting/Masked (experimental)</option>
                 <option value="pose" default="true">Pose (experimental/untested)</option>
+                <option value="custom1" default="true">Custom 1</option>
+                <option value="custom2" default="true">Custom 2</option>
+                <option value="custom3" default="true">Custom 3</option>
+                <option value="custom4" default="true">Custom 4</option>
             </param>
             <param name="positive_prompt" type="string" gui-text="Positive Prompt" _store-in-templates="true" appearance="multiline">a cat in a party hat</param>
             <param name="negative_prompt" type="string" gui-text="Negative Prompt" _store-in-templates="true" appearance="multiline">blurry</param>
@@ -45,6 +49,30 @@
                     <param name="pose_image_input_id" type="int" gui-text="Image Input ID" _store-in-templates="true" min="0" max="999999">38</param>
                     <param name="pose_input_id" type="int" gui-text="Pose Input ID" _store-in-templates="true" min="0" max="999999">0</param>
                 </page>
+                <page name="custom1_ids" gui-text="Custom 1 IDs">
+                    <param name="custom1_positive_id" type="int" gui-text="Positive Prompt ID" _store-in-templates="true" min="0" max="999999">5</param>
+                    <param name="custom1_negative_id" type="int" gui-text="Negative Prompt ID" _store-in-templates="true" min="0" max="999999">6</param>
+                    <param name="custom1_ksampler_id" type="int" gui-text="KSampler ID" _store-in-templates="true" min="0" max="999999">9</param>
+                    <param name="custom1_image_input_id" type="int" gui-text="Image Input ID" _store-in-templates="true" min="0" max="999999">17</param>
+                </page>
+                <page name="custom2_ids" gui-text="Custom 2 IDs">
+                    <param name="custom2_positive_id" type="int" gui-text="Positive Prompt ID" _store-in-templates="true" min="0" max="999999">5</param>
+                    <param name="custom2_negative_id" type="int" gui-text="Negative Prompt ID" _store-in-templates="true" min="0" max="999999">6</param>
+                    <param name="custom2_ksampler_id" type="int" gui-text="KSampler ID" _store-in-templates="true" min="0" max="999999">9</param>
+                    <param name="custom2_image_input_id" type="int" gui-text="Image Input ID" _store-in-templates="true" min="0" max="999999">17</param>
+                </page>
+                <page name="custom3_ids" gui-text="Custom 3 IDs">
+                    <param name="custom3_positive_id" type="int" gui-text="Positive Prompt ID" _store-in-templates="true" min="0" max="999999">5</param>
+                    <param name="custom3_negative_id" type="int" gui-text="Negative Prompt ID" _store-in-templates="true" min="0" max="999999">6</param>
+                    <param name="custom3_ksampler_id" type="int" gui-text="KSampler ID" _store-in-templates="true" min="0" max="999999">9</param>
+                    <param name="custom3_image_input_id" type="int" gui-text="Image Input ID" _store-in-templates="true" min="0" max="999999">17</param>
+                </page>
+                <page name="custom4_ids" gui-text="Custom4 IDs">
+                    <param name="custom4_positive_id" type="int" gui-text="Positive Prompt ID" _store-in-templates="true" min="0" max="999999">5</param>
+                    <param name="custom4_negative_id" type="int" gui-text="Negative Prompt ID" _store-in-templates="true" min="0" max="999999">6</param>
+                    <param name="custom4_ksampler_id" type="int" gui-text="KSampler ID" _store-in-templates="true" min="0" max="999999">9</param>
+                    <param name="custom4_image_input_id" type="int" gui-text="Image Input ID" _store-in-templates="true" min="0" max="999999">17</param>
+                </page>
             </param>
         </page>
         <page name="comfy" gui-text="Comfy">
@@ -53,6 +81,10 @@
             <param name="img2img_workflow_json_path" mode="file" filetypes="json" type="path" gui-text="Image To Image Workflow" _store-in-templates="true"/>
             <param name="masked_workflow_json_path" mode="file" filetypes="json" type="path" gui-text="Inpaint/masked Workflow" _store-in-templates="true"/>
             <param name="pose_workflow_json_path" mode="file" filetypes="json" type="path" gui-text="Pose Workflow" _store-in-templates="true"/>
+            <param name="custom1_workflow_json_path" mode="file" filetypes="json" type="path" gui-text="Custom 1 Workflow" _store-in-templates="true"/>
+            <param name="custom2_workflow_json_path" mode="file" filetypes="json" type="path" gui-text="Custom 2 Workflow" _store-in-templates="true"/>
+            <param name="custom3_workflow_json_path" mode="file" filetypes="json" type="path" gui-text="Custom 3 Workflow" _store-in-templates="true"/>
+            <param name="custom4_workflow_json_path" mode="file" filetypes="json" type="path" gui-text="Custom 4 Workflow" _store-in-templates="true"/>
         </page>
     </param>
     <script>

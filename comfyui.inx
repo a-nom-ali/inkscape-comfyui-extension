@@ -86,6 +86,10 @@
             <param name="custom3_workflow_json_path" mode="file" filetypes="json" type="path" gui-text="Custom 3 Workflow" _store-in-templates="true"/>
             <param name="custom4_workflow_json_path" mode="file" filetypes="json" type="path" gui-text="Custom 4 Workflow" _store-in-templates="true"/>
         </page>
+        <page name="output" gui-text="Output">
+            <param name="columns" type="int" gui-text="Columns" _store-in-templates="true" min="1" max="10">4</param>
+            <param name="gap" type="float" gui-text="Gap %" _store-in-templates="true" min="0.00" max="100.00" precision="2">1.00</param>
+        </page>
     </param>
     <script>
         <command location="inx" interpreter="python">comfyui_extension.py</command>

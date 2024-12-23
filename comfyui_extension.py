@@ -399,6 +399,10 @@ class ComfyUIExtension(inkex.EffectExtension):
             --pose_workflow_json_path: Pose Workflow JSON Path
 
             --api_url: Base URL of the ComfyUI server API.
+
+            --columns: The amount of columns to use for batch output.
+            --gap: The Gap between columns for batch output in percentage.
+
         """
         pars.add_argument(
             "--tab",
@@ -480,6 +484,8 @@ class ComfyUIExtension(inkex.EffectExtension):
                           type=str, help="Custom 4 Workflow JSON Path")
 
         pars.add_argument("--api_url", type=str, default="127.0.0.1:8188", help="API URL")
+        pars.add_argument("--columns", type=int, default=4, help="Columns")
+        pars.add_argument("--gap", type=float, default=0.01, help="Gap")
 
     def tab_select(self, _):
         """
@@ -1037,8 +1043,9 @@ class ComfyUIExtension(inkex.EffectExtension):
         """
         result_image_path = self._process_result_image(result_image_path)
         position, dimensions = self._determine_image_position_and_size()
-        position = (position[0] + (dimensions[0] * (index % 4) * 1.05),
-                    position[1] + (dimensions[1] * int(index / 4) * 1.05))
+        gap = 1.0 + self.options.gap/100.0
+        position = (position[0] + (dimensions[0] * (index % self.options.columns) * gap),
+                    position[1] + (dimensions[1] * int(index / self.options.columns) * gap))
         encoded_image = _encode_cropped_image(result_image_path)
         self._insert_image_into_svg(encoded_image, position, dimensions, workflow_json)
 

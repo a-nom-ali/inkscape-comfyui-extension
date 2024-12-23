@@ -15,10 +15,12 @@ The **Inkscape ComfyUI Extension** integrates Inkscape with the ComfyUI API, ena
  * Workflow Management: Load and utilize predefined workflows in JSON format.
  * Text to Image
  * Inpainting
-
-## New Features
  * Batch option: Once you have a look you like, generate a batch.
  * Workflows are now embedded in code as a fallback when no workflows are selected.
+
+
+## New Features
+ * Output tab added with columns and gap % inputs.
 
 ## Dependencies:
  * Inkscape: Version 1.3.2 or higher.
@@ -43,7 +45,7 @@ The **Inkscape ComfyUI Extension** integrates Inkscape with the ComfyUI API, ena
 5. Restart Inkscape: Restart Inkscape to load the new extension.
 
 ## Setup:
-1. Api version workflows are included and embedded in code if none are selected as a fallback - check to ensure you have all the right models by opening each in ComfyUI first.
+1. Api version workflows are included and embedded in code as a fallback if none are selected - check to ensure you have all the right models by opening each in ComfyUI first.
    * Or use your own after saving it to API format.
 2. The features are currently limited to:
      * A positive prompt
